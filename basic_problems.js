@@ -1,3 +1,29 @@
+// Write a function that takes three strings - a verb, an adjective, and a noun - uppercases and interpolates them into the sentence "We shall VERB the ADJECTIVE NOUN". Use ES6 template literals.
+//
+// For example,
+//
+// > madLib('make', 'best', 'guac');
+// "We shall MAKE the BEST GUAC."
+
+function madLib(verb, adj, noun) {
+  return `We shall ${verb.toUpperCase()} the ${adj.toUpperCase()} ${noun.toUpperCase()}`;
+}
+
+// Input:
+// A String, called searchString.
+// A String, called subString.
+// Output: A Boolean. true if the subString is a part of the searchString.
+//
+// > isSubstring("time to program", "time")
+// true
+//
+// > isSubstring("Jump for joy", "joys")
+// false
+
+function isSubstring(searchString, subString) {
+  return searchString.includes(subString);
+}
+
 // fizzBuzz
 //
 // 3 and 5 are magic numbers.
@@ -7,8 +33,7 @@
 function fizzBuzz(array) {
   const result = [];
   array.forEach(el => {
-    if (el % 3 === 0 || el % 5 === 0) {
-      if (el % 15 === 0) { return; }
+    if (el % 3 === 0 ^ el % 5 === 0) {
       result.push(el);
     }
   });
